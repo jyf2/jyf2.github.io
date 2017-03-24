@@ -1,644 +1,163 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
-<link href="wedsit/css/index.css" rel="stylesheet" type="text/css" />
-<link href="wedsit/css/base.css" rel="stylesheet" type="text/css" />
-<script src="wedsit/js/jquery.js"></script>
+<meta charset="UTF-8">
+<title>DuDu个人网站</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/work.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script>
-$(document).ready(function(e) {
-		//导航鼠标经过效果
-	$(".nav a").mouseenter(
-	  function(){
-		  $(".nav a").removeClass("i_red")
-		  $(this).addClass("i_red")
-		  }
-	);
-	 //导航全部分类的效果
-	$(".lei").hide()
-	$(".fen").mouseenter(
-	   function(){
-		  $(".lei").show() 
-		   }
+    $(document).ready(function(e) {
+	$(".black_box").hide();
+	$(".pro").mouseenter(
+	     function(){
+			 $(".black_box").hide();
+			 $(this).children(".black_box").show()
+			 }
 	);
 	
-	$(".lei li").mouseenter(
-	  function(){
-		  $(".lei li").removeClass("i_red")
-		  $(this).addClass("i_red")
-		  }
-	)
-	$(".lei").mouseleave(
-	 function(){
-		 $(this).hide()
-		 }
-	)
-	//定义移动盒子的宽度
-	$(".move_box").css({width:1900*$(".move_box img").length})
-var n
-function toleft(){
-	if(n<$(".move_box img").length-1){
-		n=n+1
-		}else{
-			$(".move_box").css({marginLeft:-950})
-			n=1
-			}
-	//按钮颜色的切换
-	$(".btn span").removeClass("current")
-	$(".btn span").eq(n).addClass("current")
-	if(n==4){
-		$(".btn span").eq(0).addClass("current")
-		}
-	//盒子的移动
-	$(".move_box").stop().animate({marginLeft:-950-1900*n})
-	}
- t1=setInterval(toleft,2000) 
- //鼠标经过和离开
- $(".show_box").mouseenter(
-  function(){
-	 clearInterval (t1)
-	  }
- ).mouseleave(
- function(){
-	t1=setInterval(toleft,2000)  
-	 }
- ) 
- //按钮点击的切换
- $(".btn span").click(
-  function(){
-	  n=$(this).index()
-	  $(".btn span").removeClass("current")
-	  $(".btn span").eq(n).addClass("current")
-	  $(".move_box").stop().animate({marginLeft:-950-1900*n},1000)
-	  }
- )
- //点击右箭头
- $(".a_right").click(
-   function(){
-	   if(n<$(".move_box img").length-1){
-		   n=n+1
-		   }else{
-			$(".move_box").css({marginLeft:-950})
-			n=1   
-			   }
-	   $(".move_box").stop().animate({marginLeft:-950-1900*n},1000)
-	   $(".btn span").removeClass("current")
-	   $(".btn span").eq(n).addClass("current")
-	   if(n==4){
-		$(".btn span").eq(0).addClass("current")   
-		   }
-	   }
- )
- //点击左箭头
- $(".a_left").click(
- function(){
-	 if(n>0){
-		 n=n-1
-		 }else{
-		 $(".move_box").css({marginLeft:-950-1900*4})
-		 n=3	 
-			 }
-	 $(".move_box").stop().animate({marginLeft:-950-1900*n},1000)
-	  $(".btn span").removeClass("current")
-	  $(".btn span").eq(n).addClass("current")
-	 }
- )
-
-//人气鲜果banner效果
-//定义移动盒子的宽度
-$(".move_box2").css({height:$(".move_box2 img").length*300})
-var m=0
-function totop(){
-	if(m<$(".move_box2 img").length-1){
-		m=m+1
-		}else{
-		$(".move_box2").css({top:0});
-		m=1
-			}
-	$(".move_box2").stop().animate({top:-300*m},1000)
-	}
-t2=setInterval(totop,2000);
-//鼠标经过动画停止
-$(".show_box2").mouseenter(
-function(){
-	clearInterval(t2);
-	}
-).mouseleave(
-function(){
-	t2=setInterval(totop,2000);
-	}
-)
-//人气鲜果图片效果
-$(".pro1>div").mouseenter(
-function(){
-	$(this).children(".tu").css({left:20})
-	}
-).mouseleave(
-function(){
-	$(this).children(".tu").css({left:0})
-	}
-);
-//图片经过购买框效果
-$(".red_box").mouseenter(
-   function(){
-	   $(".red_box").removeClass("current2")
-	   $(this).addClass("current2")
-	   $(".a_go").removeClass("a_red")
-	   $(this).children(".a_go").addClass("a_red")
-	   }
-);
-
-$(".red_box2").mouseenter(
-   function(){
-	   $(".red_box2").removeClass("current2")
-	   $(this).addClass("current2")
-	   $(".a_go").removeClass("a_red")
-	   $(this).children(".a_go").addClass("a_red")
-	   }
-)
-});
+    });
 </script>
 </head>
 
 <body>
-<!--顶部导航区域-->
-<div class="top_nav">
-	<div class="logo">
-    	<img src="wedsit/img/logo.png">
-    </div>
-    
-    	<div class="follow_me">
-        	<div class="love"></div>
-             <span>关注我<span>
-             <div class="clearfix"></div>
-        </div>
-        <span class="top_banner"></span>
-        <div class="search">
-        	<input class="search_box" />
-            <span class="red_box1">搜索</span>
-        </div>
-        <div class="clearfix"></div>
-   </div>
-<!--导航区-->
-<div class="nav_bg">
-	<div class="nav_box">
-    	<ul class="nav">
-        	<li><a href="#">首页</a> </li>
-            <li class="fen"><a href="#">全部分类</a> </li>
-            <li><a href="new.html"> 新品上市</a> </li>
-            <li><a href="china_fruit.html"> 国产鲜果</a> </li>
-            <li><a href="import_fruit.html">进口鲜果</a></li>
-            <li><a href="postal.html">全国包邮</a></li>
-        </ul>
-        <div class="search_small">
-     
-        	<input />
-            <span class="hui_box">搜索</span>
-            
-        </div>
-        <div class="clearfix"></div>
-                 <ul class="lei">
-                <li>进口水果</li>
-                <li>国产水果</li>
-                <li>新鲜蔬菜</li>
-                <li>礼品礼卷</li>
-                <li>海鲜水产</li>
-                <li>方便速食</li>
-          </ul>
-    </div>
-</div>
-<!--banner区-->
-<div class="show_box">
-  <div class="move_box">
-  	<img src="wedsit/img/banner1.png">
-    <img src="wedsit/img/banner04.png" />
-    <img src="wedsit/img/BANNER03.png" />
-    <img src="wedsit/img/BANNER02.png" />
-    <img src="wedsit/img/banner1.png" />
-    <div class="clearfix"></div>
-  </div>
-  <div class="btn">
-  	<span class="current"></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <span class="a_left"></span>
-  <span class="a_right"></span>
-</div>
-<!--时令鲜果区-->
-<div class="title_box">
-	<div class="line"></div>
-    <span class="plant"></span>
-    <span class="title_text"></span>
-</div>
-<div class="big_bg">
-	<div class="cent_box">
-    	<div class="fruit1">
-        	<div class="kivi">
-            <div class="box1">
-               <img src="wedsit/img/kivi.png" />
-               <div class="title_font">
-                 <h1>佳沛金猕猴桃&nbsp;&nbsp;&nbsp;营养美味</h1>
-                 <div class="line2"></div>
-               </div>
-               <div class="text2">丰盈多汁&nbsp;&nbsp;&nbsp;水润香甜</div>
-               <div class="money">
-               		<span class="jiage">218</span>
-                    <span class="danwei">元/1箱</span>
-               </div>
-              <div class="red_box">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-              </div>
-              </div>
-            </div>
-            
-            
-            <div class="orange">
-            <div class="box1">
-               <img src="wedsit/img/orange.png" />
-               <div class="title_font" style="margin-top:21px">
-                 <h1>意大利脐橙&nbsp;&nbsp;&nbsp; 阳光鲜橙</h1>
-                 <div class="line2"></div>
-               </div>
-               <div class="text2">丰盈多汁&nbsp;&nbsp;&nbsp;水润香甜</div>
-                <div class="money">
-               		<span class="jiage">68</span>
-                    <span class="danwei">元/2个</span>
-               </div>
-              <div class="red_box">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-              </div>
-              </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="fruit2">
-        	<div class="meg">
-              <div class="box2">
-                <img src="wedsit/img/megpng.png" />
-                <div class="title_font">
-                <h1>云南蒙自石榴</h1>
-                <div class="line2"></div>
+<div class="box">
+		<img class="phone img-responsive" src="img/women.png">
+        <span class="blank_box"></span>
+        <div class="work_box container-fluid">
+        			<ul class="nav navbar-nav">
+                 		<li class="active"><a href="#">全部作品</a></li>   
+                          <li><a href="#">平面作品</a></li>
+                          <li><a href="#">web作品</a></li>
+                          <li><a href="#">移动作品</a></li>
+                 </ul>
+        <div class="box2">
+                <a href="anyue.html" class="pro">
+                		<div class="phone_box">
+                        <img class="tutu " src="img/img03.png">
+                        </div>
+                        <span class="tii">安悦专题页--给肌肤放个假吧</span>
+                        <span class="black_box"></span>
+                </a>
+                  <!--ko
+                     <div class="pro">
+                		<div class="phone_box">
+                        <img class="tutu " src="img/img1-2.png">
+                        </div>
+                        <span class="tii">魔方科技产品海报</span>
+                        <span class="black_box"></span>
                 </div>
-                <div class="text2" style="margin-bottom:8px">丰盈多汁&nbsp;&nbsp;&nbsp;水润香甜</div>
-                  <div class="money2">
-               		<span class="jiage">68</span>
-                    <span class="danwei">元/2个</span>
-               </div>
-                <div class="red_box2">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-                <div class="clearfix"></div>
-               </div>
-               </div>
-             </div>
-             <div class="grape">
-                <div class="box2">
-                <img style="position:relative; left:-50px" src="wedsit/img/grape.png" />
-                <div class="title_font">
-                <h1>法国葡萄</h1>
-                <div class="line2"></div>
-                </div>
-                <div class="text2" style="margin-bottom:8px">鲜美多汁&nbsp;&nbsp;&nbsp;口感醇香</div>
-                   <div class="money2">
-               		<span class="jiage">98</span>
-                    <span class="danwei">元/1斤</span>
-               </div>
-                <div class="red_box2">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-                <div class="clearfix"></div>
-               </div>
-               </div>
-              </div>  
+                -->
+                      <a href="banner.html" class="pro">
+                		<div class="phone_box">
+                        <img class="tutu " src="img/img1-7.png">
+                        </div>
+                        <span class="tii">女装banner</span>
+                        <span class="black_box"></span>
+                </a>
+                
+                      <a href="jiezhi.html"  class="pro">
+                		<div class="phone_box">
+                        <img class="tutu " src="img/img1_1.png">
+                        </div>
+                        <span class="tii">戒指海报</span>
+                        <span class="black_box"></span>
+                </a>
                 
                 
-             <div class="caomei">
-              <div class="box2">
-               	<img src="wedsit/img/caomei.png" />
-                <div class="title_font">
-                <h1>泰国草莓</h1>
-                <div class="line2"></div>
+                      <a href="yunnanjianzhu.html" class="pro">
+                		<div class="phone_box">
+                        <img class="tutu " src="img/img2-3.png">
+                        </div>
+                        <span class="tii">云南建筑股份有限公司官网</span>
+                        <span class="black_box"></span>
+                </a>
+                
+                      <a  href="food.html" class="pro">
+                		<div class="phone_box">
+                        <img class="tutu " src="img/img2-1.png">
+                        </div>
+                        <span class="tii">武汉美食网</span>
+                        <span class="black_box"></span>
+                </a>
+                
+                      <a  href="zheye.html" class="pro">
+                		<div class="phone_box">
+                        <img class="tutu " src="img/img02.png">
+                        </div>
+                        <span class="tii">拾味咖啡馆三折页</span>
+                        <span class="black_box"></span>
+                </a>
+                
+                  <a  href="zheye2.html" class="pro">
+                		<div class="phone_box">
+                        <img class="tutu " src="img/zhe2.png">
+                        </div>
+                        <span class="tii">地产三折页</span>
+                        <span class="black_box"></span>
+                </a>
+                
+                      <a href="jinglun.html" class="pro">
+                		<div class="phone_box">
+                        <img class="tutu " src="img/img2-2.png">
+                        </div>
+                        <span class="tii">精伦电子股份有限公司</span>
+                        <span class="black_box"></span>
+                </a>
+                
+                
+                 <a  href="phone_1.html" class="pro">
+                		<div class="phone_box">
+                        <img class="tutu " src="img/img3-1.png">
+                        </div>
+                        <span class="tii">手机主题图标</span>
+                        <span class="black_box"></span>
+                </a>
+                
+                <div class="pro">
+                		<div class="phone_box">
+                        <img class="tutu " src="img/img3-2.png">
+                        </div>
+                        <span class="tii">手机主题图标2</span>
+                        <span class="black_box"></span>
                 </div>
-                <div style="margin-bottom:8px" class="text2">果肉甘甜&nbsp;&nbsp;&nbsp;果肉爽滑</div>
-                 <div class="money2">
-               		<span class="jiage">58</span>
-                    <span class="danwei">元/2斤</span>
-               </div>
-               	<div class="red_box2">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-                <div class="clearfix"></div>
-                </div>
-                </div>
-              </div>
-            <div class="clearfix"></div>
+                
+                <a  href="fruit.html" class="pro">
+                		<div class="phone_box">
+                        <img class="tutu " src="img/img3-4(2).png">
+                        </div>
+                        <span class="tii">果乐汇水果官网</span>
+                        <span class="black_box"></span>
+                </a>
+                
+                <a  href="shores.html" class="pro">
+                		<div class="phone_box">
+                        <img class="tutu " src="img/img_shose.png">
+                        </div>
+                        <span class="tii">女鞋banner</span>
+                        <span class="black_box"></span>
+                </a>
         </div>
-      <div class="clearfix"></div>
     </div>
 </div>
-<!--每周营养区-->
-<div class="red_bg">
-	<div class="cent_box">
-    	<div class="k_box">
-         <h2>每周补充所需营养</h2>
-      <div class="gr_1">
-        <div class="apple">
-        	<img src="wedsit/img/apple.png" />
-            <h3>阿克苏苹果2只（400克）</h3>
-        </div>
-        <span class="jiahao"></span>
-        <div class="kivi2">
-        	<img src="wedsit/img/kivi2.png" />
-            <h3 style="margin-top:27px">金艳黄心猕猴桃4只（400克）</h3>
-        </div>
-        <span class="jiahao"></span>
-        <div class="chengzi">
-        	<img src="wedsit/img/orange2.png" />
-            <h3 style="margin-top:25px">赣南脐橙2只（400克）</h3>
-        </div>
-       <div class="clearfix"></div>
-      </div>
-      <div class="gr_2">
-      	<div class="yingtao">
-        	<img src="wedsit/img/yingtao.png" />
-            <h3 style="margin-top:18px">智利樱桃（200克）</h3>
-        </div>
-        <span style="margin:60px 0" class="jiahao"></span>
-        <div class="qingti">
-        	<img src="wedsit/img/qingti.png" />
-            <h3>新疆青提（400克）</h3>
-        </div>
-        <span class="dengyu"></span>
-        <div class="yuan">
-            <div class="huang">
-            <h5 style="font-size:16px">立即购买</h5>
-            </div>
-        </div>
-      </div>
-        <div class="clearfix"></div>
-        </div>
-       </div>
-    </div>
-</div>
-<!--人气鲜果区-->
-<div class="title_box">
-	<div class="line"></div>
-    <span class="title_2"></span>
- </div>
- <div class="big_bg2">
- 	<div class="cent_box">
-    	<div class="show_box2">
-        	<div class="move_box2">
-            	<img src="wedsit/img/smallbanner01.png" />
-                <img src="wedsit/img/smallbanner02.png" />
-                <img src="wedsit/img/smallbanner03.png" />
-                <img src="wedsit/img/smallbanner01.png" />
-            </div>
-         </div>
-    <!--第一组水果-->  
-   <div class="pro1">
-    
-            <div class="lemon">
-           <img class="tu" style="margin-top:20px" src="wedsit/img/lemon.png" />
-           <h1>南非柠檬</h1>
-           <div class="juli">
-            <div class="money">
-               		<span class="jiage">49</span>
-                    <span class="danwei">元/10个</span>
-               </div>
-              <div class="red_box">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-              </div>
-              </div>
-         </div> 
-         
-    <div class="blueberry">
-     <img class="tu" style="margin-top:40px" src="wedsit/img/blueberry.png" />
-           <h1>新鲜蓝莓</h1>
-           <div class="juli">
-            <div class="money">
-               		<span class="jiage">78</span>
-                    <span class="danwei">元/4盒</span>
-               </div>
-              <div class="red_box">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-              </div>
-              </div>
-         </div> 
-      	 <div class="apples">
-           <img class="tu" src="wedsit/img/apple3.png" />
-         
-           <h1>新西兰红玫瑰</h1>
-           <div class="juli">
-            <div class="money">
-               		<span class="jiage">88</span>
-                    <span class="danwei">元/12个</span>
-               </div>
-              <div class="red_box">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-              </div>
-              </div>
-         </div> 
-    <div class="clearfix"></div>
-       </div>
-   <!--第二组水果-->      
-    <div class="pro1">
-        	 <div class="apples">
-          <img class="tu" style="margin-top:67px" src="wedsit/img/avocoda.png" />
-     
-           <h1>墨西哥牛油果</h1>
-           <div class="juli">
-            <div class="money">
-               		<span class="jiage">68</span>
-                    <span class="danwei">元/5个</span>
-               </div>
-              <div class="red_box">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-              </div>
-              </div>
-         </div> 
-                	 <div class="lemon">
-           <img class="tu" style="margin-top:61px"src="wedsit/img/honey.png" />
-         
-           <h1>海南铂金蜜瓜</h1>
-           <div class="juli">
-            <div class="money">
-               		<span class="jiage">98</span>
-                    <span class="danwei">元/11斤</span>
-               </div>
-              <div class="red_box">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-              </div>
-              </div>
-         </div> 
-         
-      <div class="blueberry">
-     <img class="tu" style="margin-top:12px" src="wedsit/img/pineapple.png" />
-    
-           <h1>菲律宾菠萝</h1>
-           <div class="juli">
-            <div class="money">
-               		<span class="jiage">88</span>
-                    <span class="danwei">元/3斤</span>
-               </div>
-              <div class="red_box">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-              </div>
-              </div>
-         </div> 
-     <div class="clearfix"></div>
-       </div>
-       
-   <!--第三组水果-->    
-    <div class="pro1">
-          <div class="apples">
-          <img class="tu" style="margin-top:76px" src="wedsit/img/lychee.png" />
-           <h1>台湾荔枝</h1>
-           <div class="juli">
-            <div class="money">
-               		<span class="jiage">48</span>
-                    <span class="danwei">元/2斤</span>
-               </div>
-              <div class="red_box">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-              </div>
-              </div>
-         </div> 
-         <div class="lemon">
-       <img class="tu" style="margin-top:56px" src="wedsit/img/grapefruit.png" />
-           <h1>南非红宝石西柚</h1>
-           <div class="juli">
-            <div class="money">
-               		<span class="jiage">55</span>
-                    <span class="danwei">元/10个</span>
-               </div>
-              <div class="red_box">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-              </div>
-              </div>
-         </div> 
-         
-      <div class="blueberry">
-     <img class="tu" style="margin-top:46px" src="wedsit/img/pink.png" />
-           <h1>澳大利亚蜜桃</h1>
-           <div class="juli">
-            <div class="money">
-               		<span class="jiage">88</span>
-                    <span class="danwei">元/3斤</span>
-               </div>
-              <div class="red_box">
-                <span>点击购买</span>
-                <span class="a_go"></span>
-              </div>
-              </div>
-         </div> 
-      <div class="clearfix"></div>
-    </div>
-   </div>
-</div>
-<!--页脚区域-->
-<div class="footer_bg">
-	<div class="cent_box2">
-      <div class="box3">
-    	<ul class="footer1">
-        	<li>
-            	<span>99 </span>包邮   
-            </li>
-            <li>
-            	<span>自建</span>物流   
-            </li>
-            <li>
-            	<span> 货到</span>付款   
-            </li>
-            <li>
-            	<span> 专注</span>上海 
-            </li>
-            <li style="margin:0">
-            	<span>多种</span>支付
-            </li>
-            <div class="clearfix"></div>
-        </ul>
-        <dl class="group1">
-        <dt><a href="#">关于优果</a></dt>
-        <dd><a href="#">优果简介</a></dd>
-        <dd><a href="#">精品理念</a></dd>
-        <dd><a href="#">优果愿意</a></dd> 
-        <dd><a href="#">主创故事</a></dd>
-        <dd><a href="#">优果梦想</a></dd>
-        <dd><a href="#">联系优果</a></dd>
-        </dl>
-        <dl class="group1">
-        <dt><a href="#">新手上路</a></dt>
-        <dd><a href="#">账户注册</a></dd>
-        <dd><a href="#">购物流程</a></dd>
-        <dd><a href="#">会员政策</a></dd> 
-        <dd><a href="#">订购方法</a></dd>
-        <dd><a href="#">会员积分</a></dd>
-        <dd><a href="#">礼品卷使用</a></dd>
-        </dl> 
-         <dl class="group1">
-        <dt><a href="#">付款方式</a></dt>
-        <dd><a href="#">货到付款</a></dd>
-        <dd><a href="#">在线支付</a></dd>
-        <dd><a href="#">优惠劵使用</a></dd> 
-        <dd><a href="#">发票说明</a></dd>
-        <dd><a href="#">充值说明</a></dd>
-        <dd><a href="#">储值卡使用</a></dd>
-        <dd><a href="#">卡卷购买</dd>
-        </dl>
-        <dl class="group1">
-        <dt><a href="#">配送服务</a></dt>
-        <dd><a href="#">全程冷链</a></dd>
-        <dd><a href="#">服务时间</a></dd>
-        <dd><a href="#">配送范围及运费</a></dd> 
-        <dd><a href="#">验货/拒收</a></dd>
-        <dd><a href="#">退货换货说明</a></dd>
-        </dl>
-           <dl class="group1">
-        <dt><a href="#">定制服务</a></dt>
-        <dd><a href="#">大客户部</a></dd>
-        <dd><a href="#">企业福利</a></dd>
-        <dd><a href="#">专属客服</a></dd> 
-        <dd><a href="#">礼品定制</a></dd>
-        <dd><a href="#">企业服务</a></dd>
-        </dl>
-        <dl class="group1">
-        <dt><a href="#">服务中心</a></dt>
-        <dd><a href="#">投诉留言</a></dd>
-        <dd>常见问题</dd>
-        </dl>
-   <dl class="group2">
-   <dt>二维码使用</dt>
-   <dd style="margin-top:10px"><img src="wedsit/img/erwei.png" /></dd>
-   </dl>
-   <div class="clearfix"></div>
-   </div>
-     <ul class="friend">
-     	<li style="font-size:16px; color:#000"><a href="#">友情链接</a></li>
-        <li><a href="#"> 预付365 </a></li>
-       	<li><a href="#"> 上海导购  </a></li>
-       	<li><a href="#">  华为云服务  </a></li>
-        <li><a href="#"> 招行银行小企业E家</a></li>
-      	<li><a href="#">杭州蔬菜配送</a></li>
-      	<li><a href="#">  网购新鲜水果</a></li>
-       	<li><a href="#"> 隐形眼镜</a></li>
-        <div class="clearfix"></div>
+<!--底部-->
+<div class="footer_boxs">
+     <div class="bottom_left">
+     <p>copyright&copy;2016DuDu设计师网络品牌all rights reserved<p>
+     </div>
+   <iframe  frameborder="0"  src="yinyue.html"  width="350px" height="30px" scrolling="no"></iframe>
+     <ul class="bottom_right">
+           <li>联系DuDu:</li>
+           <li class="icon_1">15871460850</li>
+           <li class="icon_2">442962750</li>
+           <li class="icon_3">442962750@qq.com</li>
      </ul>
-     <div class="copy_right">优果网 版权所有Copyright&copy;2007-2019All rights reserved</div>
-    </div>
+     <div class="clearfix"></div>
 </div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+
 </body>
 </html>
