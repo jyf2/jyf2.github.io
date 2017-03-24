@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="wedsit/css/postal.css" rel="stylesheet" type="text/css" />
+<link href="wedsit/css/base.css" rel="stylesheet" type="text/css" />
+<script src="wedsit/js/jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+	//导航鼠标经过效果
+	$(".nav a").mouseenter(
+	  function(){
+		  $(".nav a").removeClass("i_red")
+		  $(this).addClass("i_red")
+		  }
+	);
+     //导航全部分类的效果
+	$(".lei").hide()
+	$(".fen").mouseenter(
+	   function(){
+		  $(".lei").show()
+		  $(this).addClass("i_red") 
+		   }
+	);
+	$(".lei li").mouseenter(
+	  function(){
+		  $(".lei li").removeClass("i_red")
+		  $(this).addClass("i_red")
+		  }
+	)
+	$(".lei").mouseleave(
+	 function(){
+		 $(this).hide()
+		 }
+	)
+});
+</script>
+</head>
+
+<body>
+<!--顶部导航区域-->
+<div class="top_nav">
+	<div class="logo">
+    	<img src="wedsit/img/logo.png">
+    </div>
+    
+    	<div class="follow_me">
+        	<div class="love"></div>
+             <span>关注我<span>
+             <div class="clearfix"></div>
+        </div>
+        <span class="top_banner"></span>
+        <div class="search">
+        	<input class="search_box" />
+            <span class="red_box1">搜索</span>
+        </div>
+        <div class="clearfix"></div>
+   </div>
+<!--导航区-->
+<div class="nav_bg">
+	<div class="nav_box">
+    	<ul class="nav">
+        	<li><a href="index.html">首页</a> </li>
+            <li class="fen"><a href="#">全部分类</a> </li>
+            <li><a href="new.html"> 新品上市</a> </li>
+            <li><a href="china_fruit.html"> 国产鲜果</a> </li>
+            <li><a href="import_fruit.html">进口鲜果</a></li>
+            <li><a href="#">全国包邮</a></li>
+        </ul>
+        <div class="search_small">
+     
+        	<input />
+            <span class="hui_box">搜索</span>
+            
+        </div>
+        <div class="clearfix"></div>
+                 <ul class="lei">
+                <li>进口水果</li>
+                <li>国产水果</li>
+                <li>新鲜蔬菜</li>
+                <li>礼品礼卷</li>
+                <li>海鲜水产</li>
+                <li>方便速食</li>
+          </ul>
+    </div>
+</div>
+<!--banner区-->
+<div class="banner">
+<img src="wedsit/img/postal_banner.png" />
+</div>
+<!--文字内容区-->
+<div class="blue_bg">
+	<div class="cent_box">
+    	<div class="text_box">
+    	<div class="left_text">
+           <h3>Self-built professional cold storage</h3>
+           <h3>Only for freshness</h3>
+           <h4>自建专业冷库&nbsp;&nbsp;&nbsp;&nbsp;只为新鲜</h4>
+           <ul class="youdian">
+           	 <li>自建专用冷库的鲜果零售商。</li>
+             <li>严格温控，为世界鲜果休眠提供最舒适的条件。</li>
+             <li>熟化静止，静静沉睡至您开启的那一刻，新鲜苏醒</li>
+           </ul>
+           <ul class="youdian2">
+           	 <li>空间分类 满足各类鲜果保鲜温度需求</li>
+             <li>专业库管 质检人员全天候监控</li>
+             <li>科学仓管制度 确保鲜果快速流通</li>
+           </ul>
+           <div class="text_logo">
+             <img src="wedsit/img/text.png" />
+           </div>
+        </div>
+        <div class="right_text">
+        	<h1>2012年</h1>
+            <h1>开通全国鲜果配送</h1>
+            <h5>提货卡卷特色服务 全国一二线城市24使命必达</h5>
+             <h3 style="margin-top:80px">Fruit distrilbution is a against time</h3>
+           <h4>鲜果配送，是一场与时间抢先的赛跑</h4>
+            <ul class="youdian">
+           	 <li>自有物流团队， 专用车队， 牢牢把控物流配送的效率与服务质</li>
+             <li>量，快速响应， 全年无休。</li>
+           </ul>
+            <ul class="youdian2">
+           	 <li>365天全年无休</li>
+             <li>专业防震 防碰 保温措施 层层保护</li>
+           </ul>
+        </div>
+    	 <div class="clearfix"></div>
+        </div>
+ <!--表格区-->
+        <div class="title_2"></div>
+        <ul class="adress">
+          <li>北京 </li>
+          <li>上海 </li>
+          <li>广州 </li>
+          <li>深圳</li>
+          <li>重庆</li>
+          <li>成都</li>
+          <li>武汉 </li>
+          <li>杭州</li>
+          <li>南京</li>
+          <div class="clearfix"></div>
+        </ul>
+      <div class="car"></div>
+       <div class="excel"></div>
+    </div>
+</div>
+<!--页脚区域-->
+<div class="footer_bg">
+	<div class="cent_box2">
+      <div class="box3">
+    	<ul class="footer1">
+        	<li>
+            	<span>99 </span>包邮   
+            </li>
+            <li>
+            	<span>自建</span>物流   
+            </li>
+            <li>
+            	<span> 货到</span>付款   
+            </li>
+            <li>
+            	<span> 专注</span>上海 
+            </li>
+            <li style="margin:0">
+            	<span>多种</span>支付
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+        <dl class="group1">
+        <dt><a href="#">关于优果</a></dt>
+        <dd><a href="#">优果简介</a></dd>
+        <dd><a href="#">精品理念</a></dd>
+        <dd><a href="#">优果愿意</a></dd> 
+        <dd><a href="#">主创故事</a></dd>
+        <dd><a href="#">优果梦想</a></dd>
+        <dd><a href="#">联系优果</a></dd>
+        </dl>
+        <dl class="group1">
+        <dt><a href="#">新手上路</a></dt>
+        <dd><a href="#">账户注册</a></dd>
+        <dd><a href="#">购物流程</a></dd>
+        <dd><a href="#">会员政策</a></dd> 
+        <dd><a href="#">订购方法</a></dd>
+        <dd><a href="#">会员积分</a></dd>
+        <dd><a href="#">礼品卷使用</a></dd>
+        </dl> 
+         <dl class="group1">
+        <dt><a href="#">付款方式</a></dt>
+        <dd><a href="#">货到付款</a></dd>
+        <dd><a href="#">在线支付</a></dd>
+        <dd><a href="#">优惠劵使用</a></dd> 
+        <dd><a href="#">发票说明</a></dd>
+        <dd><a href="#">充值说明</a></dd>
+        <dd><a href="#">储值卡使用</a></dd>
+        <dd><a href="#">卡卷购买</dd>
+        </dl>
+        <dl class="group1">
+        <dt><a href="#">配送服务</a></dt>
+        <dd><a href="#">全程冷链</a></dd>
+        <dd><a href="#">服务时间</a></dd>
+        <dd><a href="#">配送范围及运费</a></dd> 
+        <dd><a href="#">验货/拒收</a></dd>
+        <dd><a href="#">退货换货说明</a></dd>
+        </dl>
+           <dl class="group1">
+        <dt><a href="#">定制服务</a></dt>
+        <dd><a href="#">大客户部</a></dd>
+        <dd><a href="#">企业福利</a></dd>
+        <dd><a href="#">专属客服</a></dd> 
+        <dd><a href="#">礼品定制</a></dd>
+        <dd><a href="#">企业服务</a></dd>
+        </dl>
+        <dl class="group1">
+        <dt><a href="#">服务中心</a></dt>
+        <dd><a href="#">投诉留言</a></dd>
+        <dd>常见问题</dd>
+        </dl>
+   <dl class="group2">
+   <dt>二维码使用</dt>
+   <dd style="margin-top:10px"><img src="wedsit/img/erwei.png" /></dd>
+   </dl>
+   <div class="clearfix"></div>
+   </div>
+     <ul class="friend">
+     	<li style="font-size:16px; color:#000"><a href="#">友情链接</a></li>
+        <li><a href="#"> 预付365 </a></li>
+       	<li><a href="#"> 上海导购  </a></li>
+       	<li><a href="#">  华为云服务  </a></li>
+        <li><a href="#"> 招行银行小企业E家</a></li>
+      	<li><a href="#">杭州蔬菜配送</a></li>
+      	<li><a href="#">  网购新鲜水果</a></li>
+       	<li><a href="#"> 隐形眼镜</a></li>
+        <div class="clearfix"></div>
+     </ul>
+     <div class="copy_right">优果网 版权所有Copyright@2007-2019All rights reserved</div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+h3{
+	margin:0;
+	font-size:12px;
+	color:#FFF;
+	font-weight:normal;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:16px;
+}
+h4{
+	margin:0;
+	font-weight:normal;
+	color:#FFF;
+	font-size:20px;
+	font-family:xiti;
+	line-height:20px;
+	margin-top:9px;
+}
+/*banner区*/
+.banner{
+	overflow:hidden;
+}
+.banner img{
+	position:relative;
+	left:50%;
+	margin-left:-950px;
+}
+/*文字内容区*/
+.blue_bg{
+	background-color:#009265;
+	padding-top:130px;
+	padding-bottom:110px;
+}
+.cent_box{
+	max-width:1000px;
+	margin:0 auto;
+}
+.youdian{
+	margin-top:30px;
+	font-size:14px;
+	line-height:24px;
+	color:#FFF;
+}
+.text_logo{
+	margin-top:76px;
+}
+.youdian2{
+	font-size:12px;
+	color:#FFF;
+	line-height:24px;
+	margin-top:30px;
+}
+.youdian2 li{
+	padding-left:14px;
+	background-image:url(../img/fang.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+.left_text{
+	float:left;
+}
+.right_text{
+	float:right;
+}
+.right_text h1{
+	font-family:xiti;
+	color:#FFF;
+}
+h5{
+	margin:0;
+	color:#FFF;
+	font-weight:normal;
+	font-size:14px;
+}
+.text_box{
+	margin-bottom:97px;
+}
+/*表格区*/
+.title_2{
+	background-image:url(../img/text_logo2.png);
+	width:551px;
+	height:117px;
+	margin:0 auto;
+}
+.car{
+	background-image:url(../img/carpng.png);
+	background-repeat:no-repeat;
+	width:99px;
+	height:85px;
+	margin-top:110px;
+	
+}
+.adress{
+	font-size:14px;
+	width:400px;
+	margin:0 auto;
+}
+.adress li{
+	float:left;
+	margin:0 7px;
+	color:#FFF;
+	transition:color 1s;
+}
+.adress li:hover {
+	color:red;
+}
+.excel{
+	background-image:url(../img/excel.png);
+	width:1000px;
+	height:310px;
+}

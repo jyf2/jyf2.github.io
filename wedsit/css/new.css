@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+/*banner区*/
+.banner_box{
+	overflow:hidden;
+}
+.banner{
+	position:relative;
+	left:50%;
+	margin-left:-950px;
+}
+
+.gray_box{
+	background-color:#f2f2f2;
+	padding-top:40px;
+	padding-bottom:110px;
+}
+.title_box{
+	max-width:1000px;
+	margin:0 auto;
+	background-color:#f3e111;
+}
+.tit{
+	width:340px;
+	line-height:72px;
+	text-align:center;
+	position:relative;
+	margin:0 auto;
+}
+h2{
+	margin:0;
+	font-weight:normal;
+	font-family:xiti;
+	font-size:48px;
+	color:#1a1a1a;
+	}
+.phone{
+	background-image:url(../img/title_1.png);
+	width:152px;
+	height:105px;
+	float:left;
+	position:absolute;
+	top:-20px;;
+	left:-70px;
+	background-repeat:no-repeat;
+}
+/*第一组产品*/
+.pro1{
+	margin-bottom:50px;
+}
+
+.tu{
+	position:relative;}
+
+.apples,.lemon{
+	position:relative;
+	float:left;
+	width:300px;
+	background-color:#FFF;
+	overflow:hidden;
+	padding-bottom:24px;
+	margin-right:50px;
+}
+.blueberry{
+	position:relative;
+	float:right;
+	width:300px;
+	background-color:#FFF;
+	overflow:hidden;
+	padding-bottom:24px;
+}
+.juli{
+	margin:0 20px;
+	margin-top:20px;
+}
+.pro1{
+	width:1000px;
+	margin:0 auto;
+	margin-top:38px;
+	text-align:center;
+}
+.pro1 img{
+	margin-bottom:30px;
+	margin:0 auto;
+}
+.red_box{
+	width:105px;
+	line-height:30px;
+	background-color:#e32316;
+	border-radius:4px;
+	text-align:center;
+	padding-left:10px;
+	border:1px solid #e32316;
+	height:30px;
+	color:#FFF;
+	float:right;
+	margin-top:10px;
+	transition:color 0.5s,background-color 1s;
+}
+.red_box span{
+	float:left;
+}
+.current2{
+	color:#e32316;
+	background-color:#FFF;
+}
+.money{
+	float:left;
+	color:red;
+}
+.jiage{
+	font-size:36px;
+	font-family:zongyi;
+	font-weight:bold;
+}
+.danwei{
+	font-size:20px;
+	font-family:xiti;
+}

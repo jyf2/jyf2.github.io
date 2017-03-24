@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>音乐</title>
+</head>
+
+<body style=" background:none;">
+<!-- 音乐 -->
+<audio src="music/Music.mp3"  controls loop autoplay id="music"></audio>
+<div id="c_music"><span class="pause" onClick="pause()" title="音乐暂停"></span></div>
+<div id="allCity"></div>
+<script>
+    $(function () {
+        //点击播放~暂停
+        $("#c_music").click(function () {
+            if ($('#allCity').css('display') == "block") {
+                $("#allCity").hide();
+                $('#c_music').html('<span class="play" onclick="play()" title="音乐播放"></span>');
+            } else {
+                $("#allCity").show();
+                $('#c_music').html('<span class="pause" onclick="pause()" title="音乐暂停"></span>');
+            }
+        });
+    });
+</script>
+<script language="javascript">
+    var music = document.getElementById("music");
+    function play() {
+        //播放按钮
+        music.play();
+    }
+    function pause() {
+        //暂停按钮
+        music.pause();
+    }
+</script>
+</body>
+</html>

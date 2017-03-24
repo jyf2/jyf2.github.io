@@ -1,0 +1,230 @@
+@charset "utf-8";
+/* CSS Document */
+/*banner区*/
+.banner_box{
+	overflow:hidden;
+}
+.banner{
+	position:relative;
+	left:50%;
+	margin-left:-950px;
+}
+
+.box{
+	width:1000px;
+	margin:0 auto;
+	margin-top:10px;
+	margin-bottom:22px;
+}
+.box span{
+	float:left;
+	margin-right:10px;
+}
+.tu1{
+	background-image:url(../img/small_01.png);
+	width:300px;
+	height:150px;
+}
+.tu2{
+	background-image:url(../img/small_2.png);
+	width:300px;
+	height:150px;
+}
+.tu3{
+	background-image:url(../img/small_3png.png);
+	width:185px;
+	height:150px;
+}
+.tu4{
+	background-image:url(../img/small_4.png);
+	width:185px;
+	height:150px;
+}
+.gray{
+	background-color:#eaeaea;
+	max-width:1000px;
+	margin:0 auto;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-bottom:25px;
+}
+.search_box3 li{
+	float:left;
+	border:1px solid #c7c7c7;
+	line-height:30px;
+	color:#333333;
+	font-size:12px;
+	text-align:center;
+	padding-left:30px;
+	padding-right:30px;
+	background-color:#FFF;
+	
+}
+.father1,.father2,.father3{
+	border-left:0px;
+	position:relative;
+}
+.child1,.child2,.child3{
+	position:absolute;
+}
+.child1{
+	background-image:url(../img/low_a.png);
+	width:9px;
+	height:12px;
+    right:10px;
+	top:10px;
+}
+.child2{
+	background-image:url(../img/two_a.png);
+	width:9px;
+	height:16px;
+	right:10px;
+	top:8px;
+}
+.child3{
+	background-image:url(../img/low_a.png);
+	width:9px;
+	height:12px;
+	right:10px;
+	top:10px;
+}
+.search_box3 .current{
+	background-color:#eeeeee;
+	color:red;
+	transition:background-color 0.5s,color 1s;
+}
+/*国产水果区*/
+.big_bg3{
+	background-color:#448310;
+	padding-top:50px;
+	padding-bottom:122px;
+}
+.cent_box{
+	position:relative;
+}
+.title_box{
+	width:300px;
+	margin:0 auto;
+	position:relative;
+	text-align:center;
+}
+.tu_left,.tu_right{
+	position:absolute;
+	background-image:url(../img/yuan2.png);
+	width:12px;
+	height:12px;
+	top:50%;
+}
+.tu_left{
+	left:0;
+}
+.tu_right{
+	right:0;
+}
+h5{
+	margin:0;
+	font-weight:normal;
+	font-size:47px;
+	color:#FFF;
+	font-family:xiti;
+}
+h3{
+	margin:0;
+	font-weight:normal;
+	color:#FFF;
+	font-size:28px;
+	font-family:xiti;
+}
+.font_box{
+	width:400px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.line{
+	height:32px;
+	border-bottom:2px solid #b3d465;
+}
+.title_box2{
+	position:absolute;
+	background-color:#448310;
+	top:-4px;
+	left:50%;
+	margin-left:-160px;
+}
+/*第一组水果*/
+.pro1{
+	width:1000px;
+	margin:0 auto;
+	margin-top:73px;
+	text-align:center;
+	margin-bottom:50px;
+	}
+.pro1 h1{
+	color:#4c4c4c;
+	font-family:heiti;
+}
+.pro1 img{
+	margin:0 auto;
+}
+.tu{
+	position:relative;
+}
+.red_box{
+	width:105px;
+	line-height:30px;
+	background-color:#e32316;
+	border-radius:4px;
+	text-align:center;
+	padding-left:10px;
+	border:1px solid #e32316;
+	height:30px;
+	color:#FFF;
+	float:right;
+	margin-top:10px;
+	transition:color 0.5s,background-color 1s;
+}
+ .current2{
+	background-color:#FFF;
+	color:#e32316;
+}
+.money{
+	float:left;
+	color:red;
+}
+.jiage{
+	font-size:36px;
+	font-family:zongyi;
+	font-weight:bold;
+}
+.danwei{
+	font-size:20px;
+	font-family:xiti;
+}
+.juli{
+	margin:0 20px;
+	margin-top:20px;
+}
+
+
+.red_box span{
+	float:left;
+}
+
+.apple,.ananas,.banana{
+	position:relative;
+	float:left;
+	width:300px;
+	background-color:#FFF;
+	overflow:hidden;
+	padding-bottom:24px;
+	margin-right:50px;
+	
+}
+.apple img{
+	margin-top:69px;
+}
+.banana img{
+	margin-top:7px;
+}
+/*第二组水果*/
+/*第三组水果*/
